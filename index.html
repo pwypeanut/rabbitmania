@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="src/style.css">
+  </head>
+  <body>
+    <audio id="audio" src="fireflies.ogg" autostart="false" preload="true"></audio>
+    <div id="root">
+      <table>
+      </table>
+      <hr>
+    </div>
+    <canvas width="640px" height="480px" id="sensor-canvas"></canvas>
+    <button class="startbutton" onclick="setTimeout(()=>{start();}, 1000);">Start!</button>
+    <select id="song-select"></select>
+    <div class="scoreboard">
+      <span style="color: gold"> Perfect: <span id="scoreboard-perfect"></span></span> <br/>
+      <span style="color: green"> Great: <span id="scoreboard-great"></span></span> <br/>
+      <span style="color: skyblue"> Good: <span id="scoreboard-good"></span></span> <br/>
+      <span style="color: pink"> Bad: <span id="scoreboard-bad"></span></span> <br/>
+      <span style="color: red"> Miss: <span id="scoreboard-miss"></span></span> <br/> 
+      Accuracy: <span id="scoreboard-accuracy"></span> <br/> 
+      Max Combo: <span id="max-combo"></span> <br/>
+      <span id="score-flavor"></span> <br/>
+      <a id="retry" href="">Retry!</a>
+    </div>
+    <div id="meow">
+      <div id="judgement"></div>
+      <div id="combo"></div>
+    </div>
+    <div class="feedback feedback-left"></div>
+    <div class="feedback feedback-right"></div>
+    <div class="feedback-swipe feedback-swipe-left"></div>
+    <div class="feedback-swipe feedback-swipe-right"></div>
+    <script src="camvas/javascripts/scale.fix.js"></script>
+    <script src="camvas/javascripts/camvas.js"></script>
+    <script src="src/levels.js"></script>
+    <script src="src/sensor.js"></script>
+    <script src="src/game.js"></script>
+  </body>
+</html>
